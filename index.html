@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal de redesigns dos sites da Pichau - Gaming, Prime e Store">
+    <title>Pichau - Portal de Sites Redesenhados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Reset e configurações globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Cores principais da identidade Pichau */
+            --primary-orange: #FF6700;
+            --primary-dark: #1a1a1a;
+            --secondary-dark: #2d2d2d;
+            --accent-blue: #00a8ff;
+            --text-light: #ffffff;
+            --text-gray: #b0b0b0;
+            --hover-orange: #ff8534;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            color: var(--text-light);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Partículas de fundo animadas */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.15;
+        }
+
+        .particle {
+            position: absolute;
+            background: var(--primary-orange);
+            border-radius: 50%;
+            animation: float 20s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+                opacity: 0.3;
+            }
+            50% {
+                transform: translateY(-100px) translateX(100px);
+                opacity: 0.6;
+            }
+        }
+
+        /* Container principal */
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Header do portal */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo-container {
+            margin-bottom: 30px;
+        }
+
+        .logo-text {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-orange), var(--hover-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: var(--text-gray);
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        /* Grid de cards dos sites */
+        .sites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+            animation: fadeInUp 1s ease-out 0.3s backwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Card individual */
+        .site-card {
+            background: linear-gradient(135deg, var(--secondary-dark) 0%, #222 100%);
+            border-radius: 20px;
+            padding: 40px 30px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        /* Efeito de brilho no hover */
+        .site-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 103, 0, 0.2), transparent);
+            transition: left 0.6s;
+        }
+
+        .site-card:hover::before {
+            left: 100%;
+        }
+
+        .site-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--primary-orange);
+            box-shadow: 0 20px 60px rgba(255, 103, 0, 0.3);
+        }
+
+        /* Ícone do card */
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-orange), var(--hover-orange));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            transition: transform 0.3s;
+        }
+
+        .site-card:hover .card-icon {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        /* Título do card */
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        /* Descrição do card */
+        .card-description {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* Badges de features */
+        .card-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .feature-badge {
+            background: rgba(255, 103, 0, 0.1);
+            color: var(--primary-orange);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border: 1px solid rgba(255, 103, 0, 0.3);
+        }
+
+        /* Botão de acesso */
+        .access-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, var(--primary-orange), var(--hover-orange));
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .access-btn::after {
+            content: '→';
+            position: absolute;
+            right: 20px;
+            transition: transform 0.3s;
+        }
+
+        .access-btn:hover::after {
+            transform: translateX(5px);
+        }
+
+        .access-btn:hover {
+            box-shadow: 0 10px 30px rgba(255, 103, 0, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeIn 1s ease-out 0.6s backwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .footer-text {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: var(--text-gray);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .footer-link:hover {
+            color: var(--primary-orange);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .sites-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            header {
+                margin-bottom: 40px;
+            }
+
+            .container {
+                padding: 30px 15px;
+            }
+        }
+
+        /* Efeito de loading ao clicar */
+        .site-card.loading {
+            pointer-events: none;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Partículas de fundo -->
+    <div class="particles" id="particles"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo-container">
+                <h1 class="logo-text">Pichau</h1>
+                <p class="subtitle">Portal de Redesigns</p>
+            </div>
+        </header>
+
+        <!-- Grid de sites -->
+        <div class="sites-grid">
+            <!-- Card Pichau Gaming -->
+            <div class="site-card" data-url="pichau_gaming/index.html">
+                <div class="card-icon">🎮</div>
+                <h2 class="card-title">Pichau Gaming</h2>
+                <p class="card-description">
+                    Plataforma dedicada ao universo gamer com produtos exclusivos, periféricos de alta performance 
+                    e equipamentos para competições profissionais.
+                </p>
+                <div class="card-features">
+                    <span class="feature-badge">E-Sports</span>
+                    <span class="feature-badge">Periféricos</span>
+                    <span class="feature-badge">Setup Gamer</span>
+                    <span class="feature-badge">Responsivo</span>
+                </div>
+                <a href="pichau_gaming/index.html" class="access-btn">Acessar Site</a>
+            </div>
+
+            <!-- Card Pichau Prime -->
+            <div class="site-card" data-url="pichau_prime/index.html">
+                <div class="card-icon">⭐</div>
+                <h2 class="card-title">Pichau Prime</h2>
+                <p class="card-description">
+                    Programa de assinatura exclusivo com benefícios premium: frete grátis, descontos especiais 
+                    e acesso antecipado às melhores promoções.
+                </p>
+                <div class="card-features">
+                    <span class="feature-badge">Frete Grátis</span>
+                    <span class="feature-badge">Descontos</span>
+                    <span class="feature-badge">Dark Mode</span>
+                    <span class="feature-badge">Alta Conversão</span>
+                </div>
+                <a href="pichau_prime/index.html" class="access-btn">Acessar Site</a>
+            </div>
+
+            <!-- Card Pichau Store -->
+            <div class="site-card" data-url="pichau_store/index.html">
+                <div class="card-icon">🛒</div>
+                <h2 class="card-title">Pichau Store</h2>
+                <p class="card-description">
+                    E-commerce completo de tecnologia e informática com catálogo extenso de hardware, 
+                    componentes e soluções para todos os perfis de usuários.
+                </p>
+                <div class="card-features">
+                    <span class="feature-badge">E-commerce</span>
+                    <span class="feature-badge">Hardware</span>
+                    <span class="feature-badge">Tech</span>
+                    <span class="feature-badge">Otimizado</span>
+                </div>
+                <a href="pichau_store/index.html" class="access-btn">Acessar Site</a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p class="footer-text">Desenvolvido com tecnologia de ponta e foco em conversão</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Sobre o Projeto</a>
+                <a href="#" class="footer-link">Tecnologias Utilizadas</a>
+                <a href="#" class="footer-link">Documentação</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Criação dinâmica de partículas de fundo
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 15;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Posicionamento e tamanho aleatórios
+                const size = Math.random() * 4 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                particle.style.animationDelay = `${Math.random() * 20}s`;
+                particle.style.animationDuration = `${Math.random() * 10 + 15}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Efeito de loading ao clicar nos cards
+        document.querySelectorAll('.site-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Previne múltiplos cliques se não for no botão
+                if (e.target.classList.contains('access-btn')) {
+                    this.classList.add('loading');
+                }
+            });
+        });
+
+        // Animação de entrada dos cards com stagger
+        function animateCards() {
+            const cards = document.querySelectorAll('.site-card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${0.3 + (index * 0.15)}s`;
+            });
+        }
+
+        // Inicialização
+        window.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            animateCards();
+        });
+
+        // Efeito parallax suave no mouse
+        document.addEventListener('mousemove', (e) => {
+            const particles = document.querySelectorAll('.particle');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+
+            particles.forEach((particle, index) => {
+                const speed = (index + 1) * 0.5;
+                const x = (mouseX - 0.5) * speed * 20;
+                const y = (mouseY - 0.5) * speed * 20;
+                particle.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

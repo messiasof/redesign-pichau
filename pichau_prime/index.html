@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pichau Prime - Programa de assinatura com benefícios exclusivos, frete grátis e descontos especiais">
+    <title>Pichau Prime | Benefícios Exclusivos Para Você</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode">
+    <!-- Toggle de Dark Mode -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <i class="fas fa-sun sun-icon"></i>
+        <i class="fas fa-moon moon-icon"></i>
+    </button>
+
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-icon">⭐</span>
+                    <span class="logo-text">PICHAU <span class="prime-text">PRIME</span></span>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#benefits">Benefícios</a></li>
+                    <li><a href="#pricing">Planos</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#cta" class="btn-nav">Assinar Agora</a></li>
+                </ul>
+                
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge" data-animate="fade-up">
+                    <i class="fas fa-crown"></i>
+                    <span>Mais de 50.000 membros ativos</span>
+                </div>
+                
+                <h1 class="hero-title" data-animate="fade-up" data-delay="100">
+                    Economize Mais,
+                    <span class="gradient-text">Compre Melhor</span>
+                </h1>
+                
+                <p class="hero-description" data-animate="fade-up" data-delay="200">
+                    Torne-se membro do Pichau Prime e tenha acesso a benefícios exclusivos que vão transformar 
+                    sua experiência de compra. Frete grátis ilimitado, descontos especiais e muito mais.
+                </p>
+                
+                <div class="hero-stats" data-animate="fade-up" data-delay="300">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="stat-info">
+                            <strong>Frete Grátis</strong>
+                            <span>Ilimitado</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-percent"></i>
+                        </div>
+                        <div class="stat-info">
+                            <strong>Até 15%</strong>
+                            <span>De Desconto</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <strong>Acesso</strong>
+                            <span>Antecipado</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-cta" data-animate="fade-up" data-delay="400">
+                    <a href="#pricing" class="btn btn-primary btn-large">
+                        <span>Experimentar Grátis por 30 Dias</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <p class="cta-note">
+                        <i class="fas fa-shield-alt"></i>
+                        Cancele quando quiser, sem compromisso
+                    </p>
+                </div>
+                
+                <!-- Social Proof -->
+                <div class="social-proof" data-animate="fade-up" data-delay="500">
+                    <div class="avatar-group">
+                        <img src="https://i.pravatar.cc/40?img=1" alt="Membro 1">
+                        <img src="https://i.pravatar.cc/40?img=2" alt="Membro 2">
+                        <img src="https://i.pravatar.cc/40?img=3" alt="Membro 3">
+                        <img src="https://i.pravatar.cc/40?img=4" alt="Membro 4">
+                        <img src="https://i.pravatar.cc/40?img=5" alt="Membro 5">
+                    </div>
+                    <div class="proof-text">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <strong>4.9/5</strong>
+                        </div>
+                        <p>Mais de 10.000 avaliações positivas</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual" data-animate="fade-left" data-delay="300">
+                <div class="prime-card">
+                    <div class="card-header">
+                        <span class="card-badge">PRIME</span>
+                        <i class="fas fa-crown card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <h3>Seus Benefícios</h3>
+                        <ul class="benefit-list">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Frete Grátis Ilimitado</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Descontos Exclusivos</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Acesso Antecipado</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Cupons Mensais</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Suporte Prioritário</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <div class="price">
+                            <span class="price-value">R$ 19,90</span>
+                            <span class="price-period">/mês</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-label">Por Que Ser Prime?</span>
+                <h2 class="section-title">Benefícios que Fazem a Diferença</h2>
+                <p class="section-description">
+                    Cada real investido retorna em economia e vantagens exclusivas
+                </p>
+            </div>
+
+            <div class="benefits-grid">
+                <!-- Benefício 1 -->
+                <div class="benefit-card" data-animate="fade-up" data-delay="100">
+                    <div class="benefit-icon gradient-1">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 class="benefit-title">Frete Grátis Ilimitado</h3>
+                    <p class="benefit-description">
+                        Receba todos os seus produtos sem custos de frete, não importa quantas vezes compre no mês.
+                    </p>
+                    <div class="benefit-stats">
+                        <span class="stat-highlight">Economia média de R$ 450/ano</span>
+                    </div>
+                </div>
+
+                <!-- Benefício 2 -->
+                <div class="benefit-card featured" data-animate="fade-up" data-delay="200">
+                    <div class="featured-badge">MAIS POPULAR</div>
+                    <div class="benefit-icon gradient-2">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3 class="benefit-title">Descontos Exclusivos</h3>
+                    <p class="benefit-description">
+                        Até 15% de desconto em produtos selecionados + cupons mensais para suas compras.
+                    </p>
+                    <div class="benefit-stats">
+                        <span class="stat-highlight">Economia média de R$ 800/ano</span>
+                    </div>
+                </div>
+
+                <!-- Benefício 3 -->
+                <div class="benefit-card" data-animate="fade-up" data-delay="300">
+                    <div class="benefit-icon gradient-3">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="benefit-title">Acesso Antecipado</h3>
+                    <p class="benefit-description">
+                        Seja o primeiro a aproveitar promoções e lançamentos antes de todo mundo.
+                    </p>
+                    <div class="benefit-stats">
+                        <span class="stat-highlight">24h de antecedência</span>
+                    </div>
+                </div>
+
+                <!-- Benefício 4 -->
+                <div class="benefit-card" data-animate="fade-up" data-delay="100">
+                    <div class="benefit-icon gradient-4">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3 class="benefit-title">Ofertas Semanais</h3>
+                    <p class="benefit-description">
+                        Toda semana, novos produtos com descontos especiais só para membros Prime.
+                    </p>
+                </div>
+
+                <!-- Benefício 5 -->
+                <div class="benefit-card" data-animate="fade-up" data-delay="200">
+                    <div class="benefit-icon gradient-5">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="benefit-title">Suporte Prioritário</h3>
+                    <p class="benefit-description">
+                        Atendimento diferenciado com prioridade no suporte e resolução rápida.
+                    </p>
+                </div>
+
+                <!-- Benefício 6 -->
+                <div class="benefit-card" data-animate="fade-up" data-delay="300">
+                    <div class="benefit-icon gradient-6">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="benefit-title">Eventos Exclusivos</h3>
+                    <p class="benefit-description">
+                        Participação em eventos, sorteios e promoções exclusivas para membros.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparação (Efeito Chamariz) -->
+    <section class="comparison" id="comparison">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-label">Comparação</span>
+                <h2 class="section-title">Veja Como Você Economiza</h2>
+            </div>
+
+            <div class="comparison-table" data-animate="fade-up" data-delay="100">
+                <div class="comparison-col">
+                    <div class="comparison-header">
+                        <h3>Sem Prime</h3>
+                        <p>Compras tradicionais</p>
+                    </div>
+                    <ul class="comparison-features">
+                        <li><i class="fas fa-times"></i> Frete pago em cada compra</li>
+                        <li><i class="fas fa-times"></i> Preços normais</li>
+                        <li><i class="fas fa-times"></i> Sem acesso antecipado</li>
+                        <li><i class="fas fa-times"></i> Suporte padrão</li>
+                        <li><i class="fas fa-times"></i> Sem cupons exclusivos</li>
+                    </ul>
+                    <div class="comparison-total">
+                        <span class="total-label">Custo anual estimado:</span>
+                        <span class="total-value expensive">R$ 1.500+</span>
+                    </div>
+                </div>
+
+                <!-- Coluna Central - Chamariz -->
+                <div class="comparison-col decoy">
+                    <div class="comparison-header">
+                        <h3>Prime Mensal</h3>
+                        <p>Plano mensal</p>
+                    </div>
+                    <ul class="comparison-features">
+                        <li><i class="fas fa-check"></i> Frete grátis ilimitado</li>
+                        <li><i class="fas fa-check"></i> Descontos de até 10%</li>
+                        <li><i class="fas fa-check"></i> Acesso antecipado</li>
+                        <li><i class="fas fa-check"></i> Suporte prioritário</li>
+                        <li><i class="fas fa-check"></i> 1 cupom por mês</li>
+                    </ul>
+                    <div class="comparison-total">
+                        <span class="total-label">Investimento anual:</span>
+                        <span class="total-value">R$ 238,80</span>
+                    </div>
+                </div>
+
+                <!-- Melhor Opção -->
+                <div class="comparison-col best">
+                    <div class="best-badge">MELHOR VALOR</div>
+                    <div class="comparison-header">
+                        <h3>Prime Anual</h3>
+                        <p>Economize 20%</p>
+                    </div>
+                    <ul class="comparison-features">
+                        <li><i class="fas fa-check"></i> Frete grátis ilimitado</li>
+                        <li><i class="fas fa-check"></i> Descontos de até 15%</li>
+                        <li><i class="fas fa-check"></i> Acesso antecipado</li>
+                        <li><i class="fas fa-check"></i> Suporte prioritário VIP</li>
+                        <li><i class="fas fa-check"></i> 2 cupons por mês</li>
+                        <li><i class="fas fa-check"></i> Brindes exclusivos</li>
+                    </ul>
+                    <div class="comparison-total">
+                        <span class="total-label">Investimento anual:</span>
+                        <span class="total-value best">R$ 190,00</span>
+                        <span class="savings">Economize R$ 48,80</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-label">Escolha Seu Plano</span>
+                <h2 class="section-title">Investimento que se Paga Sozinho</h2>
+                <p class="section-description">
+                    Teste grátis por 30 dias. Cancele quando quiser, sem multas ou taxas.
+                </p>
+            </div>
+
+            <div class="pricing-cards">
+                <!-- Plano Mensal -->
+                <div class="pricing-card" data-animate="fade-up" data-delay="100">
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Mensal</h3>
+                        <p class="plan-description">Flexibilidade total</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">R$</span>
+                        <span class="amount">19,90</span>
+                        <span class="period">/mês</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Todos os benefícios Prime</li>
+                        <li><i class="fas fa-check"></i> Frete grátis ilimitado</li>
+                        <li><i class="fas fa-check"></i> Descontos exclusivos</li>
+                        <li><i class="fas fa-check"></i> Cancele quando quiser</li>
+                    </ul>
+                    <button class="btn btn-outline btn-full">
+                        Começar Agora
+                    </button>
+                </div>
+
+                <!-- Plano Anual - Destaque -->
+                <div class="pricing-card featured" data-animate="fade-up" data-delay="200">
+                    <div class="popular-badge">MAIS ESCOLHIDO</div>
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Anual</h3>
+                        <p class="plan-description">Melhor custo-benefício</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">R$</span>
+                        <span class="amount">15,83</span>
+                        <span class="period">/mês</span>
+                    </div>
+                    <div class="pricing-annual">
+                        <span>R$ 190,00 cobrado anualmente</span>
+                        <span class="discount-badge">Economize 20%</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Todos os benefícios Prime</li>
+                        <li><i class="fas fa-check"></i> Frete grátis ilimitado</li>
+                        <li><i class="fas fa-check"></i> Descontos de até 15%</li>
+                        <li><i class="fas fa-check"></i> Cupons extras mensais</li>
+                        <li><i class="fas fa-check"></i> Suporte VIP</li>
+                    </ul>
+                    <button class="btn btn-primary btn-full">
+                        Assinar Plano Anual
+                    </button>
+                    <p class="trial-note">
+                        <i class="fas fa-info-circle"></i> 30 dias grátis para testar
+                    </p>
+                </div>
+            </div>
+
+            <!-- Garantia -->
+            <div class="guarantee" data-animate="fade-up" data-delay="300">
+                <div class="guarantee-icon">
+                    <i class="fas fa-shield-check"></i>
+                </div>
+                <div class="guarantee-content">
+                    <h3>Garantia de 30 Dias</h3>
+                    <p>
+                        Não ficou satisfeito? Cancele dentro de 30 dias e receba reembolso total.
+                        Sem perguntas, sem complicações.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-label">Dúvidas Frequentes</span>
+                <h2 class="section-title">Perguntas e Respostas</h2>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item" data-animate="fade-up" data-delay="100">
+                    <button class="faq-question">
+                        <span>Como funciona o período de teste gratuito?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Você tem 30 dias completos para testar todos os benefícios do Pichau Prime sem pagar nada.
+                            Se não gostar, é só cancelar antes do fim do período e não será cobrado.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-animate="fade-up" data-delay="150">
+                    <button class="faq-question">
+                        <span>Posso cancelar a qualquer momento?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Sim! Você pode cancelar sua assinatura a qualquer momento, sem multas ou taxas adicionais.
+                            O cancelamento é simples e pode ser feito direto na sua conta.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-animate="fade-up" data-delay="200">
+                    <button class="faq-question">
+                        <span>Quanto eu realmente economizo sendo Prime?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Em média, nossos membros economizam mais de R$ 1.200 por ano somando frete grátis e descontos.
+                            Se você compra regularmente, o Prime se paga em apenas 1-2 compras!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-animate="fade-up" data-delay="250">
+                    <button class="faq-question">
+                        <span>O frete grátis vale para todo o Brasil?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Sim! O benefício de frete grátis é válido para entregas em todo território nacional,
+                            incluindo regiões Norte e Nordeste.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-animate="fade-up" data-delay="300">
+                    <button class="faq-question">
+                        <span>Como funcionam os cupons mensais?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Todo mês você recebe cupons exclusivos com descontos em categorias selecionadas.
+                            Os cupons são enviados por email e ficam disponíveis na sua conta Prime.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-animate="fade-up" data-delay="350">
+                    <button class="faq-question">
+                        <span>Existe fidelidade ou contrato?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Não! Mesmo no plano anual, você pode cancelar quando quiser. No plano mensal,
+                            você paga mês a mês sem qualquer compromisso de permanência.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="final-cta" id="cta">
+        <div class="container">
+            <div class="cta-box" data-animate="zoom-in">
+                <div class="cta-content">
+                    <h2 class="cta-title">Pronto Para Economizar?</h2>
+                    <p class="cta-description">
+                        Junte-se a mais de 50.000 membros satisfeitos e comece a aproveitar todos os benefícios hoje mesmo.
+                    </p>
+                    
+                    <div class="cta-urgency">
+                        <i class="fas fa-clock"></i>
+                        <span>Oferta especial: <strong>30 dias grátis</strong> para novos membros</span>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <a href="#pricing" class="btn btn-primary btn-large">
+                            <span>Começar Teste Grátis</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="cta-features">
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Sem cartão de crédito</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Cancele quando quiser</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Garantia de 30 dias</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon">⭐</span>
+                        <span class="logo-text">PICHAU <span class="prime-text">PRIME</span></span>
+                    </div>
+                    <p class="footer-description">
+                        O programa de benefícios que transforma sua experiência de compra.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Prime</h4>
+                    <ul>
+                        <li><a href="#benefits">Benefícios</a></li>
+                        <li><a href="#pricing">Planos e Preços</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#">Como Funciona</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Minha Conta</a></li>
+                        <li><a href="#">Cancelamento</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Regulamento</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pichau Prime. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

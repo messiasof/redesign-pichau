@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pichau Gaming - Setup, periféricos e equipamentos para gamers profissionais e entusiastas">
+    <title>Pichau Gaming | Setup Gamer Profissional</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Efeito de grade cyberpunk no fundo -->
+    <div class="cyber-grid"></div>
+    
+    <!-- Navegação -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">PICHAU <span class="gaming-text">GAMING</span></span>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link">Início</a></li>
+                <li><a href="#products" class="nav-link">Produtos</a></li>
+                <li><a href="#esports" class="nav-link">E-Sports</a></li>
+                <li><a href="#featured" class="nav-link">Destaques</a></li>
+                <li><a href="#testimonials" class="nav-link">Avaliações</a></li>
+                <li><a href="#cta" class="nav-link cta-nav">Montar Setup</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section com Banner -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-badge" data-aos="fade-up">
+                    <i class="fas fa-trophy"></i> Equipamento de Campeões
+                </span>
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                    Domine o Jogo com o
+                    <span class="gradient-text">Setup Perfeito</span>
+                </h1>
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                    Equipamentos de alta performance desenvolvidos para gamers profissionais e entusiastas que buscam o melhor desempenho competitivo
+                </p>
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Gamers Ativos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Produtos Gaming</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Satisfação</span>
+                    </div>
+                </div>
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#products" class="btn btn-primary">
+                        <span>Explorar Produtos</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#featured" class="btn btn-secondary">
+                        <span>Ver Promoções</span>
+                        <i class="fas fa-fire"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual" data-aos="fade-left" data-aos-delay="500">
+                <!-- Placeholder para banner promocional -->
+                <div class="hero-banner">
+                    <img src="https://via.placeholder.com/800x600/0a0a0a/FF6700?text=Banner+Promocional" alt="Banner Gaming" class="banner-img">
+                    <div class="banner-overlay">
+                        <span class="discount-badge">ATÉ 40% OFF</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="600">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Role para explorar</span>
+        </div>
+    </section>
+
+    <!-- Categorias de Produtos -->
+    <section class="categories" id="products">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Equipamento Profissional</span>
+                <h2 class="section-title">Categorias em Destaque</h2>
+                <p class="section-description">Encontre exatamente o que você precisa para dominar suas partidas</p>
+            </div>
+
+            <div class="categories-grid">
+                <!-- Categoria 1: Periféricos -->
+                <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-icon">
+                        <i class="fas fa-keyboard"></i>
+                    </div>
+                    <h3 class="category-title">Periféricos</h3>
+                    <p class="category-description">Teclados, mouses e headsets com latência zero</p>
+                    <ul class="category-features">
+                        <li><i class="fas fa-check"></i> Switches mecânicos premium</li>
+                        <li><i class="fas fa-check"></i> RGB customizável</li>
+                        <li><i class="fas fa-check"></i> DPI ajustável</li>
+                    </ul>
+                    <a href="#" class="category-link">
+                        Ver Produtos <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <div class="category-badge-hot">HOT</div>
+                </div>
+
+                <!-- Categoria 2: Computadores Montados -->
+                <div class="category-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3 class="category-title">PCs Gamer</h3>
+                    <p class="category-description">Computadores prontos para jogar em máxima qualidade</p>
+                    <ul class="category-features">
+                        <li><i class="fas fa-check"></i> RTX 4000 Series</li>
+                        <li><i class="fas fa-check"></i> Processadores Intel/AMD</li>
+                        <li><i class="fas fa-check"></i> Garantia estendida</li>
+                    </ul>
+                    <a href="#" class="category-link">
+                        Montar PC <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <div class="category-badge-best">MAIS VENDIDO</div>
+                </div>
+
+                <!-- Categoria 3: Setup Completo -->
+                <div class="category-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-icon">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <h3 class="category-title">Setup Completo</h3>
+                    <p class="category-description">Cadeiras, mesas e acessórios para seu battlestation</p>
+                    <ul class="category-features">
+                        <li><i class="fas fa-check"></i> Ergonomia profissional</li>
+                        <li><i class="fas fa-check"></i> Iluminação RGB</li>
+                        <li><i class="fas fa-check"></i> Organização de cabos</li>
+                    </ul>
+                    <a href="#" class="category-link">
+                        Explorar <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção E-Sports -->
+    <section class="esports" id="esports">
+        <div class="container">
+            <div class="esports-content">
+                <div class="esports-image" data-aos="fade-right">
+                    <img src="https://via.placeholder.com/600x700/0a0a0a/FF6700?text=E-Sports+Team" alt="Time E-Sports">
+                    <div class="esports-badge">
+                        <i class="fas fa-trophy"></i>
+                        <span>Patrocinador Oficial</span>
+                    </div>
+                </div>
+                <div class="esports-info" data-aos="fade-left">
+                    <span class="section-badge">Pichau Gaming E-Sports</span>
+                    <h2 class="section-title">Equipando os Campeões</h2>
+                    <p class="esports-description">
+                        Nossos produtos são utilizados pelos melhores jogadores profissionais do Brasil e do mundo. 
+                        A mesma tecnologia que leva equipes ao pódio está disponível para você.
+                    </p>
+                    
+                    <div class="esports-teams">
+                        <div class="team-logo">
+                            <img src="https://via.placeholder.com/120x120/1a1a1a/FF6700?text=Team+1" alt="Time 1">
+                        </div>
+                        <div class="team-logo">
+                            <img src="https://via.placeholder.com/120x120/1a1a1a/FF6700?text=Team+2" alt="Time 2">
+                        </div>
+                        <div class="team-logo">
+                            <img src="https://via.placeholder.com/120x120/1a1a1a/FF6700?text=Team+3" alt="Time 3">
+                        </div>
+                    </div>
+
+                    <div class="esports-achievements">
+                        <div class="achievement">
+                            <i class="fas fa-medal"></i>
+                            <div>
+                                <strong>15+</strong>
+                                <span>Campeonatos</span>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <strong>200+</strong>
+                                <span>Atletas Patrocinados</span>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-gamepad"></i>
+                            <div>
+                                <strong>10+</strong>
+                                <span>Jogos Competitivos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-primary">
+                        <span>Conheça Nossos Times</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos em Destaque -->
+    <section class="featured-products" id="featured">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Ofertas Limitadas</span>
+                <h2 class="section-title">Produtos em Destaque</h2>
+                <p class="section-description">Aproveite preços especiais em equipamentos premium</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Produto 1 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-badge discount">-35%</div>
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/400x300/0a0a0a/FF6700?text=Teclado+Mecanico" alt="Teclado Mecânico">
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i> Visualização Rápida
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Periféricos</span>
+                        <h3 class="product-name">Teclado Mecânico RGB Pro</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.8/5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-old">R$ 799,99</span>
+                            <span class="price-current">R$ 519,99</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-badge new">NOVO</div>
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/400x300/0a0a0a/FF6700?text=Mouse+Gaming" alt="Mouse Gaming">
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i> Visualização Rápida
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Periféricos</span>
+                        <h3 class="product-name">Mouse Gaming 20K DPI</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0/5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">R$ 349,99</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-badge hot">HOT</div>
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/400x300/0a0a0a/FF6700?text=Headset+7.1" alt="Headset">
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i> Visualização Rápida
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Áudio</span>
+                        <h3 class="product-name">Headset 7.1 Surround</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9/5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-old">R$ 599,99</span>
+                            <span class="price-current">R$ 449,99</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 4 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-badge discount">-20%</div>
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/400x300/0a0a0a/FF6700?text=Cadeira+Gamer" alt="Cadeira Gamer">
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i> Visualização Rápida
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Setup</span>
+                        <h3 class="product-name">Cadeira Gamer Pro</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.7/5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-old">R$ 1.499,99</span>
+                            <span class="price-current">R$ 1.199,99</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-all" data-aos="fade-up">
+                <a href="#" class="btn btn-secondary">
+                    Ver Todos os Produtos <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">O Que Dizem Nossos Gamers</span>
+                <h2 class="section-title">Avaliações Reais</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Meu desempenho melhorou absurdamente depois que montei meu setup completo aqui. 
+                        A qualidade dos periféricos é incomparável!"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60/1a1a1a/FF6700?text=PX" alt="Gamer 1">
+                        <div>
+                            <strong>Pedro X.</strong>
+                            <span>Pro Player - Valorant</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Atendimento excepcional e produtos de primeira linha. Já fiz 3 compras e sempre 
+                        superam minhas expectativas!"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60/1a1a1a/FF6700?text=JL" alt="Gamer 2">
+                        <div>
+                            <strong>Julia L.</strong>
+                            <span>Streamer - League of Legends</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Preços justos, produtos originais e entrega rápida. Virei cliente fiel da Pichau Gaming!"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60/1a1a1a/FF6700?text=RC" alt="Gamer 3">
+                        <div>
+                            <strong>Rafael C.</strong>
+                            <span>Gamer Competitivo - CS2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="final-cta" id="cta">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2 class="cta-title">Pronto para Elevar seu Jogo?</h2>
+                <p class="cta-description">
+                    Junte-se a milhares de gamers que já transformaram sua experiência com nossos produtos
+                </p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary btn-large">
+                        <span>Montar Meu Setup</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline btn-large">
+                        <span>Falar com Especialista</span>
+                        <i class="fas fa-headset"></i>
+                    </a>
+                </div>
+                
+                <!-- Trust badges -->
+                <div class="trust-badges">
+                    <div class="trust-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Garantia Estendida</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-truck"></i>
+                        <span>Frete Rápido</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-lock"></i>
+                        <span>Compra Segura</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-undo"></i>
+                        <span>Troca Grátis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">PICHAU <span class="gaming-text">GAMING</span></span>
+                    </div>
+                    <p class="footer-description">
+                        Equipando gamers profissionais e entusiastas com a melhor tecnologia do mercado
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                        <a href="#" aria-label="Twitch"><i class="fab fa-twitch"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Produtos</h4>
+                    <ul>
+                        <li><a href="#">Periféricos</a></li>
+                        <li><a href="#">Computadores</a></li>
+                        <li><a href="#">Monitores</a></li>
+                        <li><a href="#">Cadeiras</a></li>
+                        <li><a href="#">Mesas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Garantia</a></li>
+                        <li><a href="#">Trocas e Devoluções</a></li>
+                        <li><a href="#">Rastreamento</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">E-Sports</a></li>
+                        <li><a href="#">Patrocínios</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Trabalhe Conosco</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pichau Gaming. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão de volta ao topo -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

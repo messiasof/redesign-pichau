@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pichau - E-commerce de tecnologia, hardware e componentes para PC. As melhores ofertas em informática.">
+    <title>Pichau | Loja de Tecnologia e Hardware</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="top-links">
+                        <a href="#"><i class="fas fa-truck"></i> Rastreio</a>
+                        <a href="#"><i class="fas fa-headset"></i> Suporte</a>
+                        <a href="#"><i class="fas fa-star"></i> Pichau Prime</a>
+                    </div>
+                    <div class="top-info">
+                        <span><i class="fas fa-shield-alt"></i> Compra 100% Segura</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <span class="logo-icon">🔧</span>
+                        <span>PICHAU</span>
+                    </div>
+                    
+                    <div class="search-bar">
+                        <input type="text" placeholder="Buscar produtos, marcas...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <button class="nav-btn">
+                            <i class="fas fa-user"></i>
+                            <span>Conta</span>
+                        </button>
+                        <button class="nav-btn cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Carrinho</span>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="nav-categories">
+                    <button class="category-btn"><i class="fas fa-bars"></i> Categorias</button>
+                    <a href="#">Hardware</a>
+                    <a href="#">Periféricos</a>
+                    <a href="#">Notebooks</a>
+                    <a href="#">Monitores</a>
+                    <a href="#">Ofertas</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner Hero -->
+    <section class="hero-banner">
+        <div class="container">
+            <div class="banner-content">
+                <div class="banner-tag">BLACK FRIDAY TODO DIA</div>
+                <h1>Ofertas Imperdíveis em <span class="highlight">Hardware</span></h1>
+                <p>Até 50% OFF em produtos selecionados + Frete Grátis para todo Brasil</p>
+                <a href="#ofertas" class="btn btn-primary">Ver Ofertas</a>
+            </div>
+            <div class="banner-image">
+                <!-- Placeholder para banner -->
+                <img src="https://via.placeholder.com/700x400/FF6700/FFFFFF?text=Banner+Promocional" alt="Banner">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorias em Destaque -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Explore por Categoria</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>Processadores</h3>
+                    <p>Intel & AMD</p>
+                    <a href="#">Ver Produtos →</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-memory"></i></div>
+                    <h3>Placas de Vídeo</h3>
+                    <p>NVIDIA & AMD</p>
+                    <a href="#">Ver Produtos →</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-hdd"></i></div>
+                    <h3>Armazenamento</h3>
+                    <p>SSD & HDD</p>
+                    <a href="#">Ver Produtos →</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-desktop"></i></div>
+                    <h3>Monitores</h3>
+                    <p>Gamer & Profissional</p>
+                    <a href="#">Ver Produtos →</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-keyboard"></i></div>
+                    <h3>Periféricos</h3>
+                    <p>Teclados & Mouses</p>
+                    <a href="#">Ver Produtos →</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-laptop"></i></div>
+                    <h3>Notebooks</h3>
+                    <p>Gamer & Trabalho</p>
+                    <a href="#">Ver Produtos →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos em Oferta -->
+    <section class="products-section" id="ofertas">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-fire"></i> Ofertas Relâmpago
+                </h2>
+                <div class="timer">
+                    <i class="fas fa-clock"></i>
+                    Termina em: <span id="countdown">23:45:12</span>
+                </div>
+            </div>
+
+            <div class="products-grid">
+                <!-- Produto 1 -->
+                <div class="product-card">
+                    <div class="product-badge discount">-40%</div>
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300/1a1a1a/FF6700?text=RTX+4060" alt="Produto">
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Placa de Vídeo RTX 4060 Ti 8GB</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(245)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="old-price">R$ 2.499,99</span>
+                            <span class="current-price">R$ 1.499,99</span>
+                            <span class="installment">12x R$ 125,00</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i> Adicionar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="product-card">
+                    <div class="product-badge hot">HOT</div>
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300/1a1a1a/FF6700?text=Ryzen+7" alt="Produto">
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Processador AMD Ryzen 7 5800X3D</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(532)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">R$ 1.799,99</span>
+                            <span class="installment">10x R$ 179,99</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i> Adicionar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="product-card">
+                    <div class="product-badge new">NOVO</div>
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300/1a1a1a/FF6700?text=Monitor+4K" alt="Produto">
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Monitor LG 27" 4K UHD 144Hz</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(189)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="old-price">R$ 2.899,99</span>
+                            <span class="current-price">R$ 2.299,99</span>
+                            <span class="installment">12x R$ 191,66</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i> Adicionar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 4 -->
+                <div class="product-card">
+                    <div class="product-badge discount">-35%</div>
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300/1a1a1a/FF6700?text=SSD+1TB" alt="Produto">
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <h3>SSD NVMe 1TB WD Black SN850X</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(892)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="old-price">R$ 899,99</span>
+                            <span class="current-price">R$ 584,99</span>
+                            <span class="installment">6x R$ 97,50</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i> Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-all">
+                <a href="#" class="btn btn-outline">Ver Todas as Ofertas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i class="fas fa-truck"></i>
+                    <div>
+                        <h4>Frete Grátis</h4>
+                        <p>Em compras acima de R$ 199</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-credit-card"></i>
+                    <div>
+                        <h4>Parcelamento</h4>
+                        <p>Em até 12x sem juros</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h4>Compra Segura</h4>
+                        <p>Proteção garantida</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-undo"></i>
+                    <div>
+                        <h4>Troca Fácil</h4>
+                        <p>30 dias para trocar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Sobre a Pichau</h3>
+                    <p>Líder em e-commerce de tecnologia no Brasil, oferecendo os melhores produtos e preços.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Categorias</h4>
+                    <ul>
+                        <li><a href="#">Hardware</a></li>
+                        <li><a href="#">Periféricos</a></li>
+                        <li><a href="#">Notebooks</a></li>
+                        <li><a href="#">Monitores</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Atendimento</h4>
+                    <ul>
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Rastreamento</a></li>
+                        <li><a href="#">Trocas e Devoluções</a></li>
+                        <li><a href="#">Garantia</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (11) 1234-5678</li>
+                        <li><i class="fas fa-envelope"></i> contato@pichau.com.br</li>
+                        <li><i class="fas fa-clock"></i> Seg-Sex: 8h-18h</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pichau. Todos os direitos reservados.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-pix"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
