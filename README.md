@@ -8,16 +8,6 @@ Fiz uns redesigns dos seus três principais sites e queria mostrar o que consegu
 
 ## 📍 O Que Tem Aqui?
 
-### 🎮 **Pichau Gaming**
-
-Design imersivo e agressivo pro público gamer. Tá cheio de efeitos legais:
-
-- Grid animado cyberpunk no fundo
-- Efeito de partículas quando você clica em produtos
-- Carousel de produtos com destaque para o "clássico"
-- Seção de E-Sports pra reforçar a credibilidade
-- Quick view de produtos sem sair da página
-
 ### ⭐ **Pichau Prime**
 
 Landing page focada em converter assinantes. Sério, esse ficou muito bom:
