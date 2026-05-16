@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portal de redesigns dos sites da Pichau - Gaming, Prime e Store">
     <title>Pichau - Portal de Sites Redesenhados</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon/pichauFavicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="colors.css">
     <style>
         /* Reset e configurações globais */
         * {
@@ -18,18 +20,18 @@
 
         :root {
             /* Cores principais da identidade Pichau */
-            --primary-orange: #FF6700;
-            --primary-dark: #1a1a1a;
-            --secondary-dark: #2d2d2d;
-            --accent-blue: #00a8ff;
-            --text-light: #ffffff;
-            --text-gray: #b0b0b0;
-            --hover-orange: #ff8534;
+            --primary-orange: var(--color-ff6700);
+            --primary-dark: var(--color-1a1a1a);
+            --secondary-dark: var(--color-2d2d2d);
+            --accent-blue: var(--color-00a8ff);
+            --text-light: var(--color-ffffff);
+            --text-gray: var(--color-b0b0b0);
+            --hover-orange: var(--color-ff8534);
         }
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            background: linear-gradient(135deg, var(--color-0f0f0f) 0%, var(--color-1a1a1a) 100%);
             color: var(--text-light);
             min-height: 100vh;
             overflow-x: hidden;
@@ -140,7 +142,7 @@
 
         /* Card individual */
         .site-card {
-            background: linear-gradient(135deg, var(--secondary-dark) 0%, #222 100%);
+            background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--color-222222) 100%);
             border-radius: 20px;
             padding: 40px 30px;
             position: relative;
@@ -148,6 +150,8 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 2px solid transparent;
             cursor: pointer;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Efeito de brilho no hover */
@@ -240,6 +244,7 @@
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
+            margin-top: auto;
         }
 
         .access-btn::after {
@@ -338,21 +343,21 @@
 
         <!-- Grid de sites -->
         <div class="sites-grid">
-            <!-- Card Pichau Gaming -->
-            <div class="site-card" data-url="pichau_gaming/index.html">
-                <div class="card-icon">🎮</div>
-                <h2 class="card-title">Pichau Gaming</h2>
+            <!-- Card Pichau Store -->
+            <div class="site-card" data-url="pichau_store/index.html">
+                <div class="card-icon">🛒</div>
+                <h2 class="card-title">Pichau Store</h2>
                 <p class="card-description">
-                    Plataforma dedicada ao universo gamer com produtos exclusivos, periféricos de alta performance 
-                    e equipamentos para competições profissionais.
+                    E-commerce completo de tecnologia e informática com catálogo extenso de hardware, 
+                    componentes e soluções para todos os perfis de usuários.
                 </p>
                 <div class="card-features">
-                    <span class="feature-badge">E-Sports</span>
-                    <span class="feature-badge">Periféricos</span>
-                    <span class="feature-badge">Setup Gamer</span>
-                    <span class="feature-badge">Responsivo</span>
+                    <span class="feature-badge">E-commerce</span>
+                    <span class="feature-badge">Hardware</span>
+                    <span class="feature-badge">Tech</span>
+                    <span class="feature-badge">Otimizado</span>
                 </div>
-                <a href="pichau_gaming/index.html" class="access-btn">Acessar Site</a>
+                <a href="pichau_store/index.html" class="access-btn">Acessar Site</a>
             </div>
 
             <!-- Card Pichau Prime -->
@@ -372,31 +377,29 @@
                 <a href="pichau_prime/index.html" class="access-btn">Acessar Site</a>
             </div>
 
-            <!-- Card Pichau Store -->
-            <div class="site-card" data-url="pichau_store/index.html">
-                <div class="card-icon">🛒</div>
-                <h2 class="card-title">Pichau Store</h2>
+            <!-- Card Mais Designs -->
+            <div class="site-card" style="cursor: default;">
+                <div class="card-icon">✨</div>
+                <h2 class="card-title">Mais Designs Vindo...</h2>
                 <p class="card-description">
-                    E-commerce completo de tecnologia e informática com catálogo extenso de hardware, 
-                    componentes e soluções para todos os perfis de usuários.
+                    Novos projetos e redesigns em desenvolvimento. Mancer, Pichau Energy Drink, Pichau Gaming e muito mais 
+                    chegando em breve.
                 </p>
                 <div class="card-features">
-                    <span class="feature-badge">E-commerce</span>
-                    <span class="feature-badge">Hardware</span>
-                    <span class="feature-badge">Tech</span>
-                    <span class="feature-badge">Otimizado</span>
+                    <span class="feature-badge">Mancer</span>
+                    <span class="feature-badge">Energy Drink</span>
+                    <span class="feature-badge">Pichau Gaming</span>
                 </div>
-                <a href="pichau_store/index.html" class="access-btn">Acessar Site</a>
+                <a href="#" class="access-btn" style="opacity: 0.5; cursor: not-allowed;">Aguarde...</a>
             </div>
         </div>
 
         <!-- Footer -->
         <footer>
-            <p class="footer-text">Desenvolvido com tecnologia de ponta e foco em conversão</p>
+            <p class="footer-text"><b>Desenvolvido com tecnologia de ponta e foco em conversão com carinho e dedicação por Emanuel Messias</b></p>
             <div class="footer-links">
-                <a href="#" class="footer-link">Sobre o Projeto</a>
-                <a href="#" class="footer-link">Tecnologias Utilizadas</a>
-                <a href="#" class="footer-link">Documentação</a>
+                <a href="https://linkedin.com/in/messias-pro" class="footer-link">Linkedin do desenvolvedor</a>
+                <a href="https://pichau.com.br" class="footer-link">O melhor e-commerce do Brasil</a>
             </div>
         </footer>
     </div>
@@ -423,16 +426,6 @@
                 particlesContainer.appendChild(particle);
             }
         }
-
-        // Efeito de loading ao clicar nos cards
-        document.querySelectorAll('.site-card').forEach(card => {
-            card.addEventListener('click', function(e) {
-                // Previne múltiplos cliques se não for no botão
-                if (e.target.classList.contains('access-btn')) {
-                    this.classList.add('loading');
-                }
-            });
-        });
 
         // Animação de entrada dos cards com stagger
         function animateCards() {

@@ -1,11 +1,13 @@
 /**
  * PICHAU PRIME - JAVASCRIPT
- * Landing Page de Alta Conversão
- * Implementa psicologia de vendas e otimizações de UX
  */
 
 // ========== INICIALIZAÇÃO ========== //
 document.addEventListener('DOMContentLoaded', function() {
+    if (window.PichauContentRenderer && typeof window.PichauContentRenderer.applyPrime === 'function') {
+        window.PichauContentRenderer.applyPrime();
+    }
+
     initThemeToggle();
     initNavigation();
     initAnimations();
@@ -15,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ========== DARK MODE TOGGLE ========== //
-// Implementa preferência do usuário (princípio da consistência)
 function initThemeToggle() {
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
@@ -122,7 +123,6 @@ function initNavigation() {
 }
 
 // ========== ANIMAÇÕES ON SCROLL ========== //
-// Implementa novidade e surpresa (princípios de atenção)
 function initAnimations() {
     const animatedElements = document.querySelectorAll('[data-animate]');
     
@@ -152,7 +152,6 @@ function initAnimations() {
 }
 
 // ========== FAQ ACCORDION ========== //
-// Reduz fricção e aumenta transparência (princípio da reciprocidade)
 function initFAQ() {
     const faqQuestions = document.querySelectorAll('.faq-question');
     
@@ -210,7 +209,6 @@ function initScrollEffects() {
 }
 
 // ========== TRACKING DE COMPORTAMENTO ========== //
-// Coleta dados para otimização (princípio da prova social)
 function trackUserBehavior() {
     // Tempo na página
     let timeOnPage = 0;
@@ -291,7 +289,6 @@ function trackUserBehavior() {
 }
 
 // ========== EFEITO DE CLIQUE ========== //
-// Feedback visual que aumenta satisfação
 function createClickEffect(element) {
     const rect = element.getBoundingClientRect();
     const ripple = document.createElement('div');
@@ -324,7 +321,6 @@ function createClickEffect(element) {
 }
 
 // ========== CONTADOR DE URGÊNCIA ========== //
-// Implementa escassez (princípio de persuasão)
 function createUrgencyTimer(element, hours = 24) {
     const endTime = new Date().getTime() + (hours * 60 * 60 * 1000);
     
@@ -349,7 +345,6 @@ function createUrgencyTimer(element, hours = 24) {
 }
 
 // ========== SIMULADOR DE ECONOMIA ========== //
-// Demonstra valor concreto (princípio da ancoragem)
 function calculateSavings(purchases = 3, avgShipping = 30, avgDiscount = 50) {
     const primeMonthly = 19.90;
     const primeAnnual = 190.00;
@@ -368,7 +363,7 @@ function calculateSavings(purchases = 3, avgShipping = 30, avgDiscount = 50) {
     };
 }
 
-// ========== TRACKING DE EVENTOS (ANALYTICS) ========== //
+// ========== TRACKING DE EVENTOS ========== //
 function trackEvent(category, action, label) {
     console.log('Event Tracked:', { category, action, label });
     
@@ -408,7 +403,6 @@ function debounce(func, wait) {
 }
 
 // ========== MODAL DE EXIT INTENT ========== //
-// Última tentativa de converter (princípio da escassez)
 function showExitIntentModal() {
     // Verifica se já mostrou modal
     if (sessionStorage.getItem('exit-modal-shown')) {
@@ -574,7 +568,6 @@ function showExitIntentModal() {
 }
 
 // ========== CHAT/SUPORTE INTERATIVO ========== //
-// Reduz fricção e aumenta confiança
 function initLiveChat() {
     // Em produção, integraria com sistema de chat real
     const chatButton = document.createElement('button');

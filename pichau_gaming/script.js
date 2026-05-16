@@ -1,11 +1,13 @@
 /**
  * PICHAU GAMING - JAVASCRIPT
- * Interatividade e otimizações de conversão
- * Implementa psicologia de vendas através de micro-interações
  */
 
 // ========== INICIALIZAÇÃO ========== //
 document.addEventListener('DOMContentLoaded', function() {
+    if (window.PichauContentRenderer && typeof window.PichauContentRenderer.applyGaming === 'function') {
+        window.PichauContentRenderer.applyGaming();
+    }
+
     initNavigation();
     initScrollEffects();
     initAOS();
@@ -21,7 +23,7 @@ function initNavigation() {
     const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav-link');
     
-    // Efeito de scroll na navbar (princípio da reciprocidade - oferece feedback visual)
+    // Efeito de scroll na navbar
     let lastScroll = 0;
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
@@ -64,7 +66,7 @@ function initNavigation() {
         });
     });
     
-    // Highlight do link ativo baseado na seção visível (princípio da prova social)
+    // Highlight do link ativo baseado na seção visível
     const sections = document.querySelectorAll('section[id]');
     
     window.addEventListener('scroll', () => {
@@ -107,7 +109,6 @@ function initScrollEffects() {
 }
 
 // ========== ANIMAÇÃO AOS (ANIMATE ON SCROLL) ========== //
-// Implementa o princípio da novidade - elementos aparecem progressivamente
 function initAOS() {
     const observerOptions = {
         threshold: 0.1,
@@ -129,7 +130,6 @@ function initAOS() {
 }
 
 // ========== INTERAÇÕES COM PRODUTOS ========== //
-// Implementa urgência e escassez (princípios de persuasão)
 function initProductInteractions() {
     const productCards = document.querySelectorAll('.product-card');
     const addToCartButtons = document.querySelectorAll('.btn-add-cart');
@@ -145,7 +145,7 @@ function initProductInteractions() {
         });
     });
     
-    // Adicionar ao carrinho com feedback visual (princípio do comprometimento)
+    // Adicionar ao carrinho com feedback visual
     addToCartButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
@@ -180,7 +180,6 @@ function initProductInteractions() {
 }
 
 // ========== NOTIFICAÇÃO DO CARRINHO ========== //
-// Feedback instantâneo aumenta confiança (princípio da reciprocidade)
 function showCartNotification() {
     // Verifica se já existe notificação
     let notification = document.querySelector('.cart-notification');
@@ -513,7 +512,7 @@ function initLazyLoading() {
 }
 
 // ========== CONTADOR DE URGÊNCIA ========== //
-// Implementa escassez para aumentar conversão (princípio da escassez)
+// ========== CONTADOR DE URGÊNCIA ========== //
 function createUrgencyTimer(element, hours = 24) {
     const endTime = new Date().getTime() + (hours * 60 * 60 * 1000);
     
@@ -552,7 +551,6 @@ function trackEvent(category, action, label) {
 }
 
 // ========== PERSONALIZAÇÃO BASEADA NO USUÁRIO ========== //
-// Salva preferências do usuário (princípio da consistência)
 function saveUserPreferences() {
     const preferences = {
         viewedProducts: [],

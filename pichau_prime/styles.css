@@ -1,8 +1,6 @@
-/* ========================================
-   PICHAU PRIME - STYLES
-   Landing Page de Alta Conversão com Dark Mode
-   Psicologia de vendas aplicada ao design
-   ======================================== */
+@import "../colors.css";
+
+/* PICHAU PRIME - STYLES */
 
 /* ========== RESET E VARIÁVEIS ========== */
 * {
@@ -13,30 +11,30 @@
 
 :root {
     /* Cores Light Mode */
-    --bg-primary-light: #ffffff;
-    --bg-secondary-light: #f8f9fa;
-    --text-primary-light: #1a1a1a;
-    --text-secondary-light: #6c757d;
+    --bg-primary-light: var(--color-ffffff);
+    --bg-secondary-light: var(--color-f8f9fa);
+    --text-primary-light: var(--color-1a1a1a);
+    --text-secondary-light: var(--color-6c757d);
     
     /* Cores Dark Mode */
-    --bg-primary-dark: #0a0a0a;
-    --bg-secondary-dark: #1a1a1a;
-    --bg-tertiary-dark: #2d2d2d;
-    --text-primary-dark: #ffffff;
-    --text-secondary-dark: #b0b0b0;
+    --bg-primary-dark: var(--color-0a0a0a);
+    --bg-secondary-dark: var(--color-1a1a1a);
+    --bg-tertiary-dark: var(--color-2d2d2d);
+    --text-primary-dark: var(--color-ffffff);
+    --text-secondary-dark: var(--color-b0b0b0);
     
     /* Cores de Marca */
-    --primary-gold: #FFD700;
-    --primary-orange: #f80909;
-    --accent-purple: #9333ea;
-    --accent-blue: #3b82f6;
-    --accent-green: #10b981;
+    --primary-gold: #ff2a2a;
+    --primary-orange: var(--color-f80909);
+    --accent-purple: var(--color-9333ea);
+    --accent-blue: var(--color-3b82f6);
+    --accent-green: var(--color-10b981);
     
     /* Gradientes */
     --gradient-primary: linear-gradient(135deg, var(--primary-gold), var(--primary-orange));
-    --gradient-purple: linear-gradient(135deg, #a855f7, #ec4899);
-    --gradient-blue: linear-gradient(135deg, #3b82f6, #8b5cf6);
-    --gradient-green: linear-gradient(135deg, #10b981, #06b6d4);
+    --gradient-purple: linear-gradient(135deg, var(--color-a855f7), var(--color-ec4899));
+    --gradient-blue: linear-gradient(135deg, var(--color-3b82f6), var(--color-8b5cf6));
+    --gradient-green: linear-gradient(135deg, var(--color-10b981), var(--color-06b6d4));
     
     /* Sombras */
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -94,7 +92,7 @@ body.dark-mode {
 
 .theme-toggle i {
     font-size: 1.3rem;
-    color: #fff;
+    color: var(--color-ffffff);
     position: absolute;
     transition: opacity var(--transition), transform var(--transition);
 }
@@ -219,7 +217,7 @@ body:not(.dark-mode) .nav-menu a {
 
 .btn-nav {
     background: var(--gradient-primary);
-    color: #fff !important;
+    color: var(--color-ffffff) !important;
     padding: 10px 24px;
     border-radius: 25px;
     font-weight: 600;
@@ -388,7 +386,7 @@ body:not(.dark-mode) .hero-stats {
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    color: #fff;
+    color: var(--color-ffffff);
 }
 
 .stat-info strong {
@@ -440,7 +438,7 @@ body:not(.dark-mode) .hero-stats {
 
 .btn-primary {
     background: var(--gradient-primary);
-    color: #fff;
+    color: var(--color-ffffff);
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
 }
 
@@ -457,7 +455,7 @@ body:not(.dark-mode) .hero-stats {
 
 .btn-outline:hover {
     background: var(--primary-gold);
-    color: #000;
+    color: var(--color-000000);
 }
 
 .btn-large {
@@ -515,7 +513,7 @@ body:not(.dark-mode) .avatar-group img {
 }
 
 .rating i {
-    color: #FFD700;
+    color: var(--color-ffd700);
     font-size: 0.9rem;
 }
 
@@ -544,7 +542,7 @@ body:not(.dark-mode) .avatar-group img {
 }
 
 body:not(.dark-mode) .prime-card {
-    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    background: linear-gradient(135deg, var(--color-ffffff), var(--color-f8f9fa));
     border-color: rgba(255, 215, 0, 0.3);
 }
 
@@ -561,7 +559,7 @@ body:not(.dark-mode) .prime-card {
 
 .card-badge {
     background: var(--gradient-primary);
-    color: #fff;
+    color: var(--color-ffffff);
     padding: 6px 16px;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -733,7 +731,7 @@ body:not(.dark-mode) .benefit-card {
     top: 20px;
     right: 20px;
     background: var(--gradient-primary);
-    color: #fff;
+    color: var(--color-ffffff);
     padding: 6px 16px;
     border-radius: 20px;
     font-size: 0.75rem;
@@ -748,7 +746,7 @@ body:not(.dark-mode) .benefit-card {
     align-items: center;
     justify-content: center;
     font-size: 2.5rem;
-    color: #fff;
+    color: var(--color-ffffff);
     margin-bottom: 25px;
     transition: transform var(--transition);
 }
@@ -760,9 +758,9 @@ body:not(.dark-mode) .benefit-card {
 .gradient-1 { background: var(--gradient-primary); }
 .gradient-2 { background: var(--gradient-purple); }
 .gradient-3 { background: var(--gradient-blue); }
-.gradient-4 { background: linear-gradient(135deg, #f59e0b, #ef4444); }
-.gradient-5 { background: linear-gradient(135deg, #14b8a6, #06b6d4); }
-.gradient-6 { background: linear-gradient(135deg, #8b5cf6, #ec4899); }
+.gradient-4 { background: linear-gradient(135deg, var(--color-f59e0b), var(--color-ef4444)); }
+.gradient-5 { background: linear-gradient(135deg, var(--color-14b8a6), var(--color-06b6d4)); }
+.gradient-6 { background: linear-gradient(135deg, var(--color-8b5cf6), var(--color-ec4899)); }
 
 .benefit-title {
     font-size: 1.5rem;
@@ -818,7 +816,7 @@ body:not(.dark-mode) .comparison {
 }
 
 body:not(.dark-mode) .comparison-col {
-    background: #ffffff;
+    background: var(--color-ffffff);
     border-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -854,7 +852,7 @@ body:not(.dark-mode) .comparison-col {
     left: 50%;
     transform: translateX(-50%);
     background: var(--gradient-primary);
-    color: #fff;
+    color: var(--color-ffffff);
     padding: 8px 24px;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -900,7 +898,7 @@ body:not(.dark-mode) .comparison-features li {
 }
 
 .comparison-features i.fa-times {
-    color: #ef4444;
+    color: var(--color-ef4444);
 }
 
 .comparison-total {
@@ -927,9 +925,10 @@ body:not(.dark-mode) .comparison-features li {
 }
 
 .total-value.expensive {
-    background: linear-gradient(135deg, #ef4444, #dc2626);
+    background: linear-gradient(135deg, var(--color-ef4444), var(--color-dc2626));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .total-value.best {
@@ -971,7 +970,7 @@ body:not(.dark-mode) .pricing {
 }
 
 body:not(.dark-mode) .pricing-card {
-    background: #ffffff;
+    background: var(--color-ffffff);
     border-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -996,7 +995,7 @@ body:not(.dark-mode) .pricing-card {
     left: 50%;
     transform: translateX(-50%);
     background: var(--gradient-primary);
-    color: #fff;
+    color: var(--color-ffffff);
     padding: 8px 24px;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -1053,7 +1052,7 @@ body:not(.dark-mode) .pricing-card {
 .discount-badge {
     display: inline-block;
     background: var(--accent-green);
-    color: #fff;
+    color: var(--color-ffffff);
     padding: 4px 12px;
     border-radius: 12px;
     font-size: 0.75rem;
@@ -1103,19 +1102,19 @@ body:not(.dark-mode) .pricing-card {
 }
 
 body:not(.dark-mode) .guarantee {
-    background: #ffffff;
+    background: var(--color-ffffff);
 }
 
 .guarantee-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, var(--accent-green), #06b6d4);
+    background: var(--accent-green);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5rem;
-    color: #fff;
+    font-size: 3rem;
+    color: var(--color-ffffff);
     flex-shrink: 0;
 }
 
@@ -1152,7 +1151,7 @@ body:not(.dark-mode) .faq {
 }
 
 body:not(.dark-mode) .faq-item {
-    background: #ffffff;
+    background: var(--color-ffffff);
     border-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -1207,7 +1206,7 @@ body:not(.dark-mode) .faq-item {
 }
 
 body:not(.dark-mode) .final-cta {
-    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    background: linear-gradient(135deg, var(--color-f8f9fa), var(--color-ffffff));
 }
 
 .cta-box {
@@ -1245,7 +1244,7 @@ body:not(.dark-mode) .final-cta {
 .cta-title {
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 900;
-    color: #fff;
+    color: var(--color-ffffff);
     margin-bottom: 20px;
     font-family: 'Sora', sans-serif;
 }
@@ -1264,13 +1263,13 @@ body:not(.dark-mode) .final-cta {
     background: rgba(0, 0, 0, 0.2);
     padding: 15px 30px;
     border-radius: 30px;
-    color: #fff;
+    color: var(--color-ffffff);
     margin-bottom: 40px;
     font-size: 1.1rem;
 }
 
 .cta-urgency strong {
-    color: #fff;
+    color: var(--color-ffffff);
     text-decoration: underline;
 }
 
@@ -1279,7 +1278,7 @@ body:not(.dark-mode) .final-cta {
 }
 
 .cta-buttons .btn {
-    background: #fff;
+    background: var(--color-ffffff);
     color: var(--primary-orange);
 }
 
@@ -1304,7 +1303,7 @@ body:not(.dark-mode) .final-cta {
 }
 
 .cta-feature i {
-    color: #fff;
+    color: var(--color-ffffff);
     font-size: 1.2rem;
 }
 
@@ -1360,7 +1359,7 @@ body:not(.dark-mode) .footer {
 
 .social-links a:hover {
     background: var(--primary-gold);
-    color: #000;
+    color: var(--color-000000);
     transform: translateY(-3px);
 }
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pichau - E-commerce de tecnologia, hardware e componentes para PC. As melhores ofertas em informática.">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/pichauFavicon.ico">
     <title>Pichau | Loja de Tecnologia e Hardware</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,8 +35,8 @@
             <div class="container">
                 <div class="nav-content">
                     <div class="logo">
-                        <span class="logo-icon">🔧</span>
-                        <span>PICHAU</span>
+                        <span class="logo-icon"></span>
+                        <span><img src="..\assets\logoRed.png" style="width: 50%; padding-top: 10px"></span>
                     </div>
                     
                     <div class="search-bar">
@@ -44,23 +45,57 @@
                     </div>
                     
                     <div class="nav-actions">
-                        <button class="nav-btn">
-                            <i class="fas fa-user"></i>
-                            <span>Conta</span>
-                        </button>
-                        <button class="nav-btn cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span>Carrinho</span>
-                            <span class="cart-count">0</span>
-                        </button>
+                        <div class="nav-action-wrapper account-wrapper">
+                            <button class="nav-btn account-btn" id="accountMenuBtn" type="button" aria-expanded="false" aria-controls="accountDropdown">
+                                <i class="fas fa-user"></i>
+                                <span>Minha Conta</span>
+                            </button>
+                            <div class="nav-dropdown account-dropdown" id="accountDropdown">
+                                <p class="account-title">Acesse sua conta</p>
+                                <a href="#" class="account-link"><i class="fas fa-right-to-bracket"></i> Login</a>
+                                <a href="#" class="account-link"><i class="fas fa-user-plus"></i> Cadastro</a>
+                            </div>
+                        </div>
+
+                        <div class="nav-action-wrapper cart-wrapper">
+                            <button class="nav-btn cart-btn" id="cartMenuBtn" type="button" aria-expanded="false" aria-controls="cartDropdown">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Carrinho</span>
+                                <span class="cart-count">0</span>
+                            </button>
+                            <div class="nav-dropdown cart-dropdown" id="cartDropdown">
+                                <div class="cart-dropdown-header">
+                                    <h4>Meu Carrinho</h4>
+                                    <span class="cart-total-label">Total: <strong id="cartTotal">R$ 0,00</strong></span>
+                                </div>
+                                <div class="cart-items" id="cartItems">
+                                    <p class="cart-empty">Seu carrinho está vazio.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="nav-categories">
-                    <button class="category-btn"><i class="fas fa-bars"></i> Categorias</button>
+                    <button class="category-btn" id="categoryMenuBtn" type="button" aria-expanded="false" aria-controls="categoryDropdown">
+                        <i class="fas fa-bars"></i>
+                        <span>Categorias</span>
+                        <i class="fas fa-chevron-down category-chevron"></i>
+                    </button>
+                    <div class="category-dropdown" id="categoryDropdown">
+                        <p class="category-dropdown-title">Categorias em Destaque</p>
+                        <ul>
+                            <li>Hardware</li>
+                            <li>Placas de Vídeo</li>
+                            <li>Processadores</li>
+                            <li>Periféricos</li>
+                            <li>Monitores</li>
+                            <li>Armazenamento</li>
+                        </ul>
+                    </div>
                     <a href="#">Hardware</a>
                     <a href="#">Periféricos</a>
-                    <a href="#">Notebooks</a>
+                    <!-- <a href="#">Notebooks</a> -->
                     <a href="#">Monitores</a>
                     <a href="#">Ofertas</a>
                 </div>
@@ -72,14 +107,13 @@
     <section class="hero-banner">
         <div class="container">
             <div class="banner-content">
-                <div class="banner-tag">BLACK FRIDAY TODO DIA</div>
                 <h1>Ofertas Imperdíveis em <span class="highlight">Hardware</span></h1>
                 <p>Até 50% OFF em produtos selecionados + Frete Grátis para todo Brasil</p>
                 <a href="#ofertas" class="btn btn-primary">Ver Ofertas</a>
             </div>
             <div class="banner-image">
                 <!-- Placeholder para banner -->
-                <img src="https://via.placeholder.com/700x400/FF6700/FFFFFF?text=Banner+Promocional" alt="Banner">
+                <img src="..\assets\BannerBlackGamer.png" alt="Banner">
             </div>
         </div>
     </section>
@@ -119,12 +153,12 @@
                     <p>Teclados & Mouses</p>
                     <a href="#">Ver Produtos →</a>
                 </div>
-                <div class="category-card">
+                <!-- <div class="category-card">
                     <div class="category-icon"><i class="fas fa-laptop"></i></div>
                     <h3>Notebooks</h3>
                     <p>Gamer & Trabalho</p>
                     <a href="#">Ver Produtos →</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -317,7 +351,7 @@
                     <ul>
                         <li><a href="#">Hardware</a></li>
                         <li><a href="#">Periféricos</a></li>
-                        <li><a href="#">Notebooks</a></li>
+                        <!-- <li><a href="#">Notebooks</a></li> -->
                         <li><a href="#">Monitores</a></li>
                     </ul>
                 </div>
@@ -335,9 +369,8 @@
                 <div class="footer-col">
                     <h4>Contato</h4>
                     <ul>
-                        <li><i class="fas fa-phone"></i> (11) 1234-5678</li>
-                        <li><i class="fas fa-envelope"></i> contato@pichau.com.br</li>
-                        <li><i class="fas fa-clock"></i> Seg-Sex: 8h-18h</li>
+                        <li><i class="fas fa-phone"></i> (47) 3305-5150</li>
+                        <li><i class="fas fa-envelope"></i> sac@pichau.com.br</li>
                     </ul>
                 </div>
             </div>
@@ -354,6 +387,8 @@
         </div>
     </footer>
 
+    <script src="../content.config.js"></script>
+    <script src="../content-renderer.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

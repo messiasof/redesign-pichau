@@ -1,3 +1,5 @@
+@import "../colors.css";
+
 /* ========================================
    PICHAU GAMING - STYLES
    Desenvolvido com foco em conversão e experiência gamer
@@ -12,25 +14,25 @@
 
 :root {
     /* Cores Principais - Identidade Visual Pichau */
-    --primary-orange: #f80909;
-    --hover-orange: #ff8534;
-    --dark-bg: #0a0a0a;
-    --dark-secondary: #1a1a1a;
-    --dark-tertiary: #2d2d2d;
+    --primary-orange: var(--color-f80909);
+    --hover-orange: var(--color-ff8534);
+    --dark-bg: var(--color-0a0a0a);
+    --dark-secondary: var(--color-1a1a1a);
+    --dark-tertiary: var(--color-2d2d2d);
     
     /* Cores de Destaque */
-    --accent-blue: #00d4ff;
-    --accent-green: #00ff88;
-    --accent-purple: #b026ff;
+    --accent-blue: var(--color-00d4ff);
+    --accent-green: var(--color-00ff88);
+    --accent-purple: var(--color-b026ff);
     
     /* Texto */
-    --text-light: #ffffff;
-    --text-gray: #b0b0b0;
-    --text-dark: #6a6a6a;
+    --text-light: var(--color-ffffff);
+    --text-gray: var(--color-b0b0b0);
+    --text-dark: var(--color-6a6a6a);
     
     /* Gradientes */
     --gradient-primary: linear-gradient(135deg, var(--primary-orange), var(--hover-orange));
-    --gradient-cyber: linear-gradient(135deg, #00d4ff, #b026ff);
+    --gradient-cyber: linear-gradient(135deg, var(--color-00d4ff), var(--color-b026ff));
     
     /* Sombras */
     --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -640,12 +642,12 @@ section {
 }
 
 .category-badge-hot {
-    background: linear-gradient(135deg, #ff0080, #ff6700);
+    background: linear-gradient(135deg, var(--color-ff0080), var(--color-ff6700));
     color: white;
 }
 
 .category-badge-best {
-    background: linear-gradient(135deg, #00ff88, #00d4ff);
+    background: linear-gradient(135deg, var(--color-00ff88), var(--color-00d4ff));
     color: var(--dark-bg);
 }
 
@@ -774,6 +776,7 @@ section {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: var(--spacing-lg);
     margin-bottom: var(--spacing-xl);
+    align-items: stretch;
 }
 
 .product-card {
@@ -783,6 +786,9 @@ section {
     transition: all var(--transition-normal);
     border: 1px solid rgba(255, 255, 255, 0.05);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .product-card:hover {
@@ -804,17 +810,17 @@ section {
 }
 
 .product-badge.discount {
-    background: linear-gradient(135deg, #ff0080, #ff6700);
+    background: linear-gradient(135deg, var(--color-ff0080), var(--color-ff6700));
     color: white;
 }
 
 .product-badge.new {
-    background: linear-gradient(135deg, #00ff88, #00d4ff);
+    background: linear-gradient(135deg, var(--color-00ff88), var(--color-00d4ff));
     color: var(--dark-bg);
 }
 
 .product-badge.hot {
-    background: linear-gradient(135deg, #ffaa00, #ff6700);
+    background: linear-gradient(135deg, var(--color-ffaa00), var(--color-ff6700));
     color: white;
     animation: pulse-badge 2s infinite;
 }
@@ -861,6 +867,9 @@ section {
 
 .product-info {
     padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .product-category {
@@ -886,7 +895,7 @@ section {
 }
 
 .product-rating i {
-    color: #ffaa00;
+    color: var(--color-ffaa00);
     font-size: 0.9rem;
 }
 
@@ -929,6 +938,7 @@ section {
     align-items: center;
     justify-content: center;
     gap: 8px;
+    margin-top: auto;
 }
 
 .btn-add-cart:hover {
@@ -970,7 +980,7 @@ section {
 }
 
 .testimonial-rating i {
-    color: #ffaa00;
+    color: var(--color-ffaa00);
     font-size: 1.2rem;
 }
 
