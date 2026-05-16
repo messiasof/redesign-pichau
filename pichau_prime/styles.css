@@ -931,10 +931,6 @@ body:not(.dark-mode) .comparison-features li {
     background-clip: text;
 }
 
-.total-value.best {
-    background: var(--gradient-primary);
-}
-
 .savings {
     display: block;
     margin-top: 10px;
